@@ -9,8 +9,11 @@ const Block = styled.div`
 `
 
 const Circle = styled.div`
-  height: 140px;
-  width: 140px;
+  --circle-size: 140px;
+
+  height: var(--circle-size);
+  width: var(--circle-size);
+
   border-radius: 50%;
   background: linear-gradient(45deg, #e66465 10%, #9198e5 100%);
 `

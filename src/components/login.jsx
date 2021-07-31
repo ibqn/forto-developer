@@ -97,10 +97,10 @@ const LoginForm = () => {
       <Formik
         initialValues={initialState}
         validationSchema={Yup.object({
-          username: Yup.string().email().required('Product name is required'),
+          username: Yup.string().email().required('Email input is required'),
           password: Yup.string()
             .min(8, 'Password should be at least 8 characters long')
-            .required('Password is required'),
+            .required('Password input is required'),
         })}
         onSubmit={(values) => console.log(values)}
       >
@@ -108,7 +108,7 @@ const LoginForm = () => {
           <fieldset>
             <label htmlFor="username">
               Username
-              <Field name="username" />
+              <Field name="username" type="email" />
               <ErrorMessage name="username" component="span" />
             </label>
             <label htmlFor="password">
